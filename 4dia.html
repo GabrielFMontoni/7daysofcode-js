@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 Dia - 7 Days Of Code</title>
+</head>
+<body>
+    <script>
+        let numero = Math.floor(Math.random()*(100-0+1)+0)
+    for(let tentativas=2; tentativas>=0; tentativas--){
+        let tentativa = prompt("Acerte o número de 0 a 100")
+
+        if(tentativa == numero){
+           alert("Parabéns, você acertou o número!")
+           break;
+        }else{
+            alert(`Errou. Você tem mais ${tentativas} tentativas`)
+        }
+        if(tentativas==0){
+        alert(`Você perdeu, o número correto era ${numero}`)
+        }
+    }
+         
+    </script>
+</body>
+</html>

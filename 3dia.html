@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3 Dia - 7 days of code</title>
+  </head>
+  <body>
+    <script>
+      let menu = 1;
+      let escolheu;
+      while (menu == 1) {
+        let escolha = prompt(
+          "[1] Pretendo seguir Front-End \n[2] Pretendo seguir Back-end "
+          
+        );
+        menu=2;
+        while (menu == 2) {
+          if (escolha == 1) {
+            escolheu = "Front-End";
+            let especializacao = prompt(
+              "Realmente Front-End é interessante. Você pode aprender bibliotecas e frameworks como React e Vue\n O que você prefere?\n [1] React [2]Vue"
+            );
+            if (especializacao == 1) {
+              alert(
+                `React é uma ótima opção para o mercado. Parabéns pela escolha, agora se dedique e aprenda mais sobre!`
+              );
+            } else if(especializacao==2) {
+              alert(
+                "Vue é uma escolha ótima para Framework Front-end. Parabéns, se dedique e aprenda para aplicar com maestria."
+              );
+            }
+            else{
+                alert ("Opção errada. Tente novamente.")
+            }
+            
+          } else if(escolha==2) {
+            escolheu = "Back-End";
+            let especializacao = prompt(
+              "Realmente Back-end é interessante. Você pode aprender linguagens de programação como C# e Java\n O que você prefere?\n [1] C# [2]Java"
+            );
+            if (especializacao == 1) {
+              alert(
+                `C# é uma ótima opção para o mercado. Parabéns pela escolha, agora se dedique e aprenda mais sobre!`
+              );
+            } else if(especializacao==2) {
+              alert(
+                "Java é complexo mas um dos mais utilizados atualmente. Parabéns, se dedique e aprenda para aplicar com maestria."
+              );
+            }else{
+                alert ("Opção errada. Tente novamente.")
+            }
+          } 
+       
+          if(escolha==1 || escolha==2){
+        menu =
+          prompt(`[1] Escolher novamente área de especialização (Back-end ou Front-end)\n [2] Escolher entre especialidades do ${escolheu}\n [3]Informar alguma tecnologia que gostaria de aprender\n [4] Sair`);
+        }else{
+            alert ("Opção errada. Tente novamente.")
+            menu=1;
+          }
+        while(menu<1 || menu>4){
+            alert ("Opção errada. Tente novamente.")
+            menu =
+          prompt(`[1] Escolher novamente área de especialização (Back-end ou Front-end)\n [2] Escolher entre especialidades do ${escolheu}\n [3]Informar alguma tecnologia que gostaria de aprender\n [4] Sair`);
+          }
+        while (menu == 3) {
+          let tecnologias = prompt(
+            "Qual tecnologia que você deseja aprender a mais?"
+          );
+          alert(
+            `${tecnologias} parece uma boa opção. Boa sorte em sua decisão, siga firme e forte!`
+          );
+          menu =
+          prompt(`[1] Escolher novamente área de especialização (Back-end ou Front-end)\n [2] Escolher entre especialidades do ${escolheu}\n [3]Informar alguma tecnologia que gostaria de aprender\n [4] Sair`);
+        }
+    
+        if (menu == 4) {
+          break;
+        }
+      }
+    }
+    </script>
+  </body>
+</html>

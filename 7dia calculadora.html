@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora JS - 7 Days of Code</title>
+  </head>
+  <body>
+    <script>
+        function numeros(){
+            let num1 = prompt("Digite o primeiro número:")
+            let num2 = prompt("Digite o segundo número")
+            return [num1,num2]
+        }
+      function somar() {
+        let num = numeros()
+        let operacao = parseFloat(num[0]) + parseFloat(num[1]);
+        alert(`O resultado de ${num[0]}+${num[1]} é de ${operacao}`)
+      }
+      function subtrair() {
+        let num = numeros()
+        let operacao = parseFloat(num[0]) - parseFloat(num[1]);
+        alert(`O resultado de ${num[0]}-${num[1]} é de ${operacao}`)
+      }
+      function dividir() {
+        let num = numeros()
+        let operacao = parseFloat(num[0]) / parseFloat(num[1]);
+        if(num[1]==0){
+            alert("O denominador não pode ser 0")
+            return;
+        }else{
+        alert(`O resultado de ${num[0]}/${num[1]} é de ${operacao}`)
+        }
+      }
+      function multiplicar() {
+        let num = numeros()
+        let operacao = parseFloat(num[0]) * parseFloat(num[1]);
+        alert(`O resultado de ${num[0]}*${num[1]} é de ${operacao}`)
+      }
+
+      let sair = 1;
+      while (sair != 5) {
+        let menu = prompt(`
+        [1] Somar
+        [2] Subtrair
+        [3] Dividir
+        [4] Multiplicar
+        [5] Sair
+        `)
+        switch(menu){
+            case "1": somar()
+            break;
+            case "2": subtrair()
+            break;
+            case "3": dividir()
+            break;
+            case "4": multiplicar()
+            break;
+           case "5":
+           alert("Obrigado por usar o programa!") 
+           break;
+            default: alert("Operação errada")
+            break;
+        }
+        if(menu==5){
+            break;
+        }
+      }
+    </script>
+  </body>
+</html>

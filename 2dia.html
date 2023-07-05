@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 Days of Code 2 Dia</title>
+</head>
+<body>
+    <script>
+        let nome = prompt("Qual o seu nome?")
+        while(nome==""||nome==null||nome==" "){
+            nome = prompt("Digite corretamente seu nome")
+        }
+        let idade = prompt("Quantos anos você tem?")
+        while(idade<0 || idade>100 ){
+            idade = prompt("Digite corretamente sua idade")
+        }
+        let linguagem_programacao = prompt("Qual linguagem de programação você está estudando?")
+        
+        let confirmacao = prompt(`Você gosta de aprender ${linguagem_programacao}? Digite 1 para SIM e 2 para Não`)
+        
+        // while(confirmacao!=1 || confirmacao!=2){
+            let aviso;
+        if(confirmacao==1){
+            aviso = "Muito bom! Continue estudando e você terá muito sucesso."
+        }else{
+            aviso = "Ahh que pena... Já tentou aprender outras linguagens?"
+        }
+       
+    // }
+
+
+
+        window.alert(`Olá ${nome}, você tem ${idade} e já está aprendendo ${linguagem_programacao}!\n ${aviso}`)
+
+    </script>
+</body>
+</html>

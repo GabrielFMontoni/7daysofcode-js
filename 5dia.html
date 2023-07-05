@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5 Dia - 7 Days of Code</title>
+  </head>
+  <body>
+    <script>
+      let continuar = 1;
+      let frutas = [];
+      let laticinios = [];
+      let congelados = [];
+      let doces = [];
+
+      function chamaMenu(){
+        let menu = prompt(`Você deseja inserir em qual categoria?
+         [1] Frutas
+         [2] Laticinios
+         [3] Congelados
+         [4] Doces`);
+         AdicionaCategoria(menu)
+         return menu;
+      }
+
+      function AdicionaCategoria(menu){
+
+        if (menu == 1) {
+          let fruta = prompt(
+            "Qual fruta você deseja inserir? Digite 5 para voltar"
+          );
+
+          if (fruta == 5) {
+            chamaMenu()
+          } else {
+            frutas.push(fruta);
+          }
+        } else if (menu == 2) {
+          let laticinio = prompt(
+            "Qual laticínio você deseja inserir? Digite 5 para voltar"
+          );
+
+          if (laticinio == 5) {
+            chamaMenu()
+          } else {
+            laticinios.push(laticinio);
+          }
+        } else if (menu == 3) {
+          let congelado = prompt(
+            "Qual congelado você deseja inserir? Digite 5 para voltar"
+          );
+
+          if (congelado == 5) {
+            chamaMenu()
+          } else {
+            congelados.push(congelado);
+          }
+        } else if (menu == 4) {
+          let doce = prompt(
+            "Qual doce você deseja inserir? Digite 5 para voltar"
+          );
+
+          if (doce == 5) {
+            chamaMenu()
+          } else {
+            doces.push(doce);
+          }
+        }
+      }
+      while (continuar == 1) {
+        
+        chamaMenu()
+     
+
+        continuar = prompt(`Você deseja continuar? 
+         [1] Sim
+         [2] Não`);
+      }
+
+      window.alert(`Lista de compras:
+        Frutas: ${frutas}
+        Laticinios: ${laticinios}
+        Congelados: ${congelados}
+        Doces: ${doces}`);
+    </script>
+  </body>
+</html>
